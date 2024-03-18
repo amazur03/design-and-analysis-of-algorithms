@@ -11,11 +11,11 @@ protected:
     {
         int index;          // Index of the ranking
         std::string title;  // Title of the entry
-        int pos;            // Position in the ranking
+        int grade;          // Grade
     };
 
 public:
-    Ranking* ranking; // Array to store ranking data
+    Ranking* ranking;  // Array to store ranking data
     int _size;         // Size of the ranking array
 
     // Constructor: Initializes the Upload object with given size and reads data from file

@@ -13,7 +13,7 @@ Upload::Upload(int size)
 
 Upload::~Upload()
 {
-    delete[] ranking; // Deallocate memory
+    delete[] ranking; // Clean up memory
 }
 
 void Upload::dataFromFile()
@@ -24,7 +24,7 @@ void Upload::dataFromFile()
     if (file.is_open())
     {
         std::string title;
-        std::string pos;
+        std::string grade;
         std::string tmpIndex;
         std::string tmpString;
         std::getline(file, tmpString); // Read and discard the first line (header)
@@ -43,10 +43,10 @@ void Upload::dataFromFile()
                 std::getline(tmp, tmpTmpName, ',');
                 title = title + ',' + tmpTmpName;
             }
-            std::getline(tmp, pos, ','); // Extract position
-            if (!pos.empty())
+            std::getline(tmp, grade, ','); // Extract position
+            if (!grade.empty())
             {
-                ranking[index] = { stoi(tmpIndex), title, stoi(pos) }; // Store data in Ranking array
+                ranking[index] = { stoi(tmpIndex), title, stoi(grade) }; // Store data in Ranking array
                 index++;
             }
         }
@@ -58,6 +58,6 @@ void Upload::show()
 {
     for (int i = 0; i < _size; i++)
     {
-        std::cout << ranking[i].index << " " << ranking[i].title << " " << ranking[i].pos << std::endl; // Display index, title, and position
+        std::cout << ranking[i].index << " " << ranking[i].title << " " << ranking[i].grade << std::endl; // Display index, title, and position
     }
 }

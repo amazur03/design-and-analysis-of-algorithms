@@ -108,7 +108,12 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <StackReserveSize>16777216</StackReserveSize>
+      <StackReserveSize>67108864</StackReserveSize>
+      <HeapReserveSize>67108864</HeapReserveSize>
+      <HeapCommitSize>
+      </HeapCommitSize>
+      <StackCommitSize>
+      </StackCommitSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -131,10 +136,16 @@
     <None Include="project2_data.csv" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BucketSort.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MergeSort.cpp" />
+    <ClCompile Include="QuickSort.cpp" />
     <ClCompile Include="Upload.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BucketSort.hpp" />
+    <ClInclude Include="MergeSort.hpp" />
+    <ClInclude Include="QuickSort.hpp" />
     <ClInclude Include="Upload.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
