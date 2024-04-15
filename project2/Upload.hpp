@@ -29,6 +29,9 @@ public:
 
     // Function to display the ranking data
     void show();
+
+    // Function to test if sorting is correct
+    bool test();
 };
 
 #endif // UPLOAD_HPP

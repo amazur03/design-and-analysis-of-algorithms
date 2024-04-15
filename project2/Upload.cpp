@@ -61,3 +61,14 @@ void Upload::show()
         std::cout << ranking[i].index << " " << ranking[i].title << " " << ranking[i].grade << std::endl; // Display index, title, and position
     }
 }
+
+bool Upload::test() {
+    for (int i = 0; i < _size - 1; i++) {
+        if (ranking[i].grade > ranking[i + 1].grade) {
+            std::cout << "Data is NOT sorted." << std::endl;
+            return false;
+        }
+    }
+    std::cout << "Data is sorted." << std::endl;
+    return true;
+}
