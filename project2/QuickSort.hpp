@@ -9,7 +9,7 @@ public:
 
     void sort(); // Default sort in ascending order
 
-    void show(); // Display full array
+    void show(); // Override show method to display after sorting
 
 private:
     void swap(Ranking* from, Ranking* to);
